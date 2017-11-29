@@ -2,10 +2,10 @@
 Your chance to explore Loops and Turtles!
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
+         their colleagues and Sreekar Manyam.
 """
 ########################################################################
-# TODO: 1.
+# DONE: 1.
 # On Line 5 above, replace  PUT_YOUR_NAME_HERE  with your own name.
 ########################################################################
 
@@ -28,3 +28,44 @@ Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
 #
 #  Don't forget to COMMIT your work by using  VCS ~ Commit and Push.
 ########################################################################
+import rosegraphics as rg
+
+window = rg.TurtleWindow()
+print("Turtle Race")
+slow_turtle = rg.SimpleTurtle('turtle')
+slow_turtle.pen = rg.Pen('black', 5)
+slow_turtle.speed = 5
+slow_turtle.pen_up()
+slow_turtle.backward(100)
+slow_turtle.pen_down()
+
+fast_turtle = rg.SimpleTurtle('turtle')
+fast_turtle.pen = rg.Pen('red', 5)
+fast_turtle.speed = 10
+fast_turtle.pen_up()
+fast_turtle.backward(100)
+fast_turtle.left(90)
+fast_turtle.forward(50)
+fast_turtle.right(90)
+fast_turtle.pen_down()
+
+crazy_turtle = rg.SimpleTurtle('turtle')
+crazy_turtle.pen = rg.Pen('purple', 5)
+crazy_turtle.speed = 7.5
+crazy_turtle.pen_up()
+crazy_turtle.backward(100)
+crazy_turtle.right(90)
+crazy_turtle.forward(100)
+crazy_turtle.left(135)
+crazy_turtle.pen_down()
+
+for k in range(12):
+    slow_turtle.forward(5)
+    fast_turtle.forward(30)
+    crazy_turtle.right(90)
+    crazy_turtle.forward(20)
+    crazy_turtle.left(90)
+    crazy_turtle.forward(20)
+
+window.close_on_mouse_click()
+
